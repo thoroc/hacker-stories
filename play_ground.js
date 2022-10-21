@@ -75,3 +75,26 @@ console.log('Firstname: ' + t_firstName + ', Lastname: ' + t_lastName);
 const { firstName, lastName } = user;
 
 console.log('Firstname: ' + firstName + ', Lastname: ' + lastName);
+
+// JS nested deconstruction
+
+console.log('\nJS nested Deconstruction\n===========================');
+
+const owner = {
+  ownerName: 'Robin',
+  pet: {
+    name: 'Trixi',
+  },
+};
+
+const ownerFirstName = owner.ownerName;
+const petName = owner.pet.name;
+
+console.log(ownerFirstName + ' has a pet named: ' + petName);
+
+const {
+  ownerName,
+  pet: { name },
+} = owner;
+
+console.log(ownerName + ' has a pet named: ' + name);
