@@ -1,5 +1,7 @@
 import * as React from 'react';
 import './App.css';
+import Search from './components/Search';
+import List from './components/List';
 
 const App = () => {
   const stories = [
@@ -44,7 +46,7 @@ const App = () => {
       objectID: 4,
     },
   ];
-  const [searchTerm, setSearchTerm] = React.useState('');
+  const [searchTerm, setSearchTerm] = React.useState('React');
 
   const handleSearch = (event) => {
     console.log(event.target.value);
@@ -59,8 +61,7 @@ const App = () => {
     <div>
       <h1>My Hacker Stories</h1>
 
-      <Search onSearch={handleSearch} data={searchTerm} />
-      {/* <p>Searching for: {searchTerm}</p> */}
+      <Search search={searchTerm} onSearch={handleSearch} />
 
       <hr />
 
@@ -68,35 +69,5 @@ const App = () => {
     </div>
   );
 };
-
-const Search = (props) => {
-  return (
-    <div>
-      <label htmlFor="search">Search: </label>
-      <input id="search" type="text" onChange={props.onSearch} />
-      <p>Searching for: {props.data}</p>
-    </div>
-  );
-};
-
-const List = (props) => (
-  <ul>
-    {props.list.map((item) => (
-      <Item key={item.objectID} item={item} />
-    ))}
-  </ul>
-);
-
-const Item = (props) => (
-  <li>
-    {/* Comment section */}
-    <span>
-      <a href={props.item.url}>{props.item.title}</a>
-    </span>
-    <span>{props.item.author}</span>
-    <span>{props.item.num_comments}</span>
-    <span>{props.item.points}</span>
-  </li>
-);
 
 export default App;
