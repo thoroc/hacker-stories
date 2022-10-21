@@ -98,3 +98,25 @@ const {
 } = owner;
 
 console.log(ownerName + ' has a pet named: ' + name);
+
+// JS Spread & Rest operators
+
+console.log('\nJS Spread & Rest Operators\n===========================');
+
+const profile = {
+  firstName: 'Robin',
+  lastName: 'Wieruch',
+};
+
+const address = {
+  country: 'Germany',
+  city: 'Berlin',
+};
+
+const spreadRestUser = {
+  ...profile,
+  gender: 'Male',
+  ...address,
+};
+
+console.log(spreadRestUser);
