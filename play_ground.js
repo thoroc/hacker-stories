@@ -57,3 +57,21 @@ const filteredFruits = fruits.filter((fruit) => fruit.length > 5);
 
 console.log('Fruits: ' + fruits);
 console.log('Filtered Fruits: ' + filteredFruits);
+
+// JS object deconstruction
+
+console.log('\nJS Object Deconstruction\n===========================');
+
+const user = {
+  firstName: 'Robin',
+  lastName: 'Wieruch',
+};
+
+const t_firstName = user.firstName;
+const t_lastName = user.lastName;
+
+console.log('Firstname: ' + t_firstName + ', Lastname: ' + t_lastName);
+
+const { firstName, lastName } = user;
+
+console.log('Firstname: ' + firstName + ', Lastname: ' + lastName);
