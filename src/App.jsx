@@ -29,22 +29,29 @@ function App() {
       <input id="search" type="text" />
 
       <hr />
-      <ul>
-        {list.map(function (item) {
-          return (
-            <li key={item.objectID}>
-              {/* Comment section */}
-              <span>
-                <a href={item.url}>{item.title}</a>
-              </span>
-              <span>{item.author}</span>
-              <span>{item.num_comments}</span>
-              <span>{item.points}</span>
-            </li>
-          );
-        })}
-      </ul>
+
+      <List />
     </div>
+  );
+}
+
+function List() {
+  return (
+    <ul>
+      {list.map(function (item) {
+        return (
+          <li key={item.objectID}>
+            {/* Comment section */}
+            <span>
+              <a href={item.url}>{item.title}</a>
+            </span>
+            <span>{item.author}</span>
+            <span>{item.num_comments}</span>
+            <span>{item.points}</span>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 
