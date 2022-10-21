@@ -99,9 +99,9 @@ const {
 
 console.log(ownerName + ' has a pet named: ' + name);
 
-// JS Spread & Rest operators
+// JS Spread operator
 
-console.log('\nJS Spread & Rest Operators\n===========================');
+console.log('\nJS Spread Operator\n===========================');
 
 const profile = {
   firstName: 'Robin',
@@ -113,10 +113,28 @@ const address = {
   city: 'Berlin',
 };
 
-const spreadRestUser = {
+const spreadUser = {
   ...profile,
   gender: 'Male',
   ...address,
 };
 
-console.log(spreadRestUser);
+console.log({ spreadUser });
+
+// JS Rest operator
+
+console.log('\nJS Rest Operator\n===========================');
+
+const restUser = {
+  id: 1,
+  firstName: 'Robin',
+  lastName: 'Wieruch',
+  country: 'Germany',
+  city: 'Berlin',
+};
+
+const { id, country, city, ...userWithoutAddress } = restUser;
+
+console.log('Id: ' + id);
+console.log('City: ' + city);
+console.log({ userWithoutAddress });
