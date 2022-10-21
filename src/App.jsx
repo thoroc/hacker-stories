@@ -18,9 +18,17 @@ const list = [
     points: 5,
     objectID: 1,
   },
+  {
+    title: 'Material-UI',
+    url: 'https://mui.com/material-ui/',
+    author: 'Olivier Tassinari',
+    num_comments: 5,
+    points: 11,
+    objectID: 2,
+  },
 ];
 
-function App() {
+const App = () => {
   return (
     <div>
       <h1>My Hacker Stories</h1>
@@ -32,35 +40,31 @@ function App() {
       <List />
     </div>
   );
-}
+};
 
-function Search() {
+const Search = () => {
   return (
     <div>
       <label htmlFor="search">Search: </label>
       <input id="search" type="text" />
     </div>
   );
-}
+};
 
-function List() {
-  return (
-    <ul>
-      {list.map(function (item) {
-        return (
-          <li key={item.objectID}>
-            {/* Comment section */}
-            <span>
-              <a href={item.url}>{item.title}</a>
-            </span>
-            <span>{item.author}</span>
-            <span>{item.num_comments}</span>
-            <span>{item.points}</span>
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
+const List = () => (
+  <ul>
+    {list.map((item) => (
+      <li key={item.objectID}>
+        {/* Comment section */}
+        <span>
+          <a href={item.url}>{item.title}</a>
+        </span>
+        <span>{item.author}</span>
+        <span>{item.num_comments}</span>
+        <span>{item.points}</span>
+      </li>
+    ))}
+  </ul>
+);
 
 export default App;

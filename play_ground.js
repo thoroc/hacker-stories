@@ -32,3 +32,17 @@ console.log(robin.getName());
 const dennis = new Person('Dennis', 'Wieruch');
 
 console.log(dennis.getName());
+
+// JS Arrow function
+
+console.log('\nJS Arrow function\n===========================');
+
+const addOne = (count) => {
+  return count + 1;
+};
+
+const addTwo = (count) => count + 2;
+
+console.log('Count: 1=' + 1);
+console.log('Count: 1+1=' + addOne(1));
+console.log('Count: 2+2=' + addTwo(2));
