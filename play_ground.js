@@ -46,3 +46,14 @@ const addTwo = (count) => count + 2;
 console.log('Count: 1=' + 1);
 console.log('Count: 1+1=' + addOne(1));
 console.log('Count: 2+2=' + addTwo(2));
+
+// JS filter
+
+console.log('\nJS Filter\n===========================');
+
+const fruits = ['apple', 'banana', 'citrus', 'datte'];
+
+const filteredFruits = fruits.filter((fruit) => fruit.length > 5);
+
+console.log('Fruits: ' + fruits);
+console.log('Filtered Fruits: ' + filteredFruits);
