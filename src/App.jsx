@@ -26,6 +26,22 @@ const stories = [
     points: 11,
     objectID: 2,
   },
+  {
+    title: 'Jest',
+    url: 'https://jestjs.io/',
+    author: 'Simen Bekkhus',
+    num_comments: 2,
+    points: 1,
+    objectID: 3,
+  },
+  {
+    title: 'Babel',
+    url: 'https://babeljs.io/',
+    author: 'Sebastian ?',
+    num_comments: 1,
+    points: 1,
+    objectID: 4,
+  },
 ];
 
 const App = () => {
